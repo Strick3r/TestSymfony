@@ -1,0 +1,31 @@
+security:
+    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    providers:
+        user_db:
+            entity: { class: App\Entity\User, property: rol }
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            anonymous: true
+            logout:
+                path:   app_logout
+                target: /
+            # activate different ways to authenticate
+
+            #http_basic: true
+            # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
+
+            form_login: true
+
+            guard:
+                authenticators:
+                    - App\Security\UserAuthenticator
+
+    # Easy way to control access for large sections of your site
+    # Note: Only the *first* access control that matches will be used
+    access_control:
+         - { path: ^/user, roles: ROLE_ADMIN }
+         - { path: ^/page/1, roles: [ROLE_ADMIN,ROLE_PAGE_1]}
+         - { path: ^/page/2, roles: [ROLE_ADMIN,ROLE_PAGE_2] }
