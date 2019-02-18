@@ -5,6 +5,8 @@ In this test will create a simple crud with some security business, to check it 
 
 Primeros pasos
 
+0) Añadir en el etc/hosts una entrada tal como:
+           175.27.0.2 testing.hola.com
 1) Arrancar docker compose mediante el comando:
            docker-compose up -d (estando dentro de la carpeta docker)
 2) Acceder al docker mediante el comando  
