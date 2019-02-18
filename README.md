@@ -23,16 +23,16 @@ composer install
 ```
 5. En lo que respecta a la persistencia realizar los siguiente pasos
    - Crear la BDD mediante el comando : 
-           ```sh
+           ```s
            bin/console doctrine:database:create
            ```
    - Crear el schema de la BDD mediante: 
-           ```sh
+           ```s
            doctrine:schema:create
            ```
            
 6. Añadimos los fixtures para crear los datos basicos para que funcione la aplicación mediante: 
-           ```sh
+           ```s
            doctrine:fixtures:load
            ```
            
