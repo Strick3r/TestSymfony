@@ -20,11 +20,11 @@ docker-compose exec --u {user} client bash
 composer install
 ```
 5. En lo que respecta a la persistencia realizar los siguiente pasos
-   5.1 Crear la BDD mediante el comando : 
+   - Crear la BDD mediante el comando : 
            ```sh
            bin/console doctrine:database:create
            ```
-   5.2 Crear el schema de la BDD mediante: 
+   - Crear el schema de la BDD mediante: 
            ```sh
            doctrine:schema:create
            ```
