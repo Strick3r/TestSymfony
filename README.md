@@ -37,12 +37,12 @@ composer install
            ```
    - Crear el schema de la BDD mediante: 
            ```
-           doctrine:schema:create
+           bin/console doctrine:schema:create
            ```
            
 6. Añadimos los fixtures para crear los datos basicos para que funcione la aplicación mediante: 
            ```
-           doctrine:fixtures:load
+           bin/console doctrine:fixtures:load
            ```
            
 
